@@ -1,0 +1,3 @@
+include ':love_share'
+include ':app'
+rootProject.name = "My Application"
