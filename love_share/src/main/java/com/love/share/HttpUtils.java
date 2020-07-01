@@ -6,7 +6,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
 
-import com.google.gson.Gson;
+import com.alibaba.fastjson.JSON;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -174,7 +175,7 @@ public class HttpUtils {
                         InputStream inputStream = connection.getInputStream();
                         String result = inputStream2String(inputStream);
                         if (result != null && callback != null) {
-                            postSuccessObject(callback, new Gson().fromJson(result, cls));
+                            postSuccessObject(callback, JSON.parseObject(result,cls));
                         }
                     } else {
                         if (callback != null) {

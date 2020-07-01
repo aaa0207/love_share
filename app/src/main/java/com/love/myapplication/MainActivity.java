@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(String result) {
                 Log.e("xxx", result);
+
             }
 
             @Override
